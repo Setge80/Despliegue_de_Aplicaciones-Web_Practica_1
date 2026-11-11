@@ -26,6 +26,7 @@ Todo el código generado fue revisado y corregido manualmente para cumplir las e
 
 La aplicación está desplegada en **Render** y conectada a **MongoDB Atlas**:
 - **URL Base:** `https://despliegue-de-aplicaciones-web-practica-1.onrender.com`
+> **Nota sobre la ruta raíz (`/`):** La API solo expone los endpoints definidos exigidos (`/recintos` y `/eventos`). Al acceder a la URL base raíz (`/`), el servidor devolverá una respuesta `404 Not Found`, lo cual es el comportamiento esperado (y concretado en las lineas 22-27 de `index.js`) al no haberse configurado un endpoint para dicha ruta.
 
 ## Pruebas de Funcionamiento
 
@@ -36,7 +37,6 @@ Las pruebas de los endpoints se han realizado mediante el archivo de peticiones 
 
 ### 0. Server correctamente iniciado en Render.
 ![Server Render ON](screenshots/Server_iniciadoRender.png)
-> **Nota sobre la ruta raíz (`/`):** La API solo expone los endpoints definidos exigidos (`/recintos` y `/eventos`). Al acceder a la URL base raíz (`/`), el servidor devolverá una respuesta `404 Not Found`, lo cual es el comportamiento esperado (y concretado en las lineas 22-27 de `index.js`) al no haberse configurado un endpoint para dicha ruta.
 
 ### 1. Creación de Recinto (`POST /recintos`).
 Respuesta `201 Created` al enviar los datos del recinto desde la extensión **REST Client** en VS Code:
