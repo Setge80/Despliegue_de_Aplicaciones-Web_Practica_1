@@ -1,0 +1,33 @@
+### 1. Crear un nuevo recinto
+POST https://despliegue-de-aplicaciones-web-practica-1.onrender.com/recintos
+Content-Type: application/json
+
+{
+  "nombre": "Palacio de Deportes",
+  "direccion": "Avenida de la Costa 45",
+  "localidad": "Alicante",
+  "aforoMaximo": 5000
+}
+
+### 2. Obtener la lista de recintos
+GET https://despliegue-de-aplicaciones-web-practica-1.onrender.com/recintos
+
+### 3. Crear un evento vinculado al recinto (a partir de aqui no estan documentados, pero funcionan)
+POST https://despliegue-de-aplicaciones-web-practica-1.onrender.com/eventos
+Content-Type: application/json
+
+{
+  "nombre": "Concierto de Verano",
+  "fecha": "2026-07-15T20:00:00.000Z",
+  "entradas": [
+    {
+      "tipo": "General",
+      "precio": 25,
+      "disponibles": 1500
+    }
+  ],
+  "recinto": "6af46a43a1104c1aa204011d"
+}
+
+### 4. Consultar eventos
+GET https://despliegue-de-aplicaciones-web-practica-1.onrender.com/eventos
